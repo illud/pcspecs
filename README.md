@@ -56,6 +56,7 @@ func main(){
     24 
     134
     TUF GAMING B460M-PLUS (WI-FI*/
+}
 ```
 
 Or
@@ -70,6 +71,7 @@ func main(){
     /* Output
     NVIDIA GeForce RTX 2060 SUPER
     */
+}
 ```
 
 ## License
