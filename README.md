@@ -48,7 +48,7 @@ import pcs "github.com/saturnavt/pcspecs"
 func main(){
     fmt.Println(pcs.Spec())
     /* Output
-    DESKTOP-4DA5M71 
+    DESKTOP-5DH6S74 
     Microsoft Windows 10
     Pro 10 
     Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
