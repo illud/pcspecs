@@ -8,14 +8,14 @@ import (
 //
 func TestSpec(t *testing.T) {
 	expected := SysInfo{
-		"DESKTOP-4DA5M71",
-		"Microsoft Windows 10 Pro",
-		"10",
-		"Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz",
-		"NVIDIA GeForce RTX 2060 SUPER",
-		"24",
-		111,
-		"TUF GAMING B460M-PLUS (WI-FI)",
+		"fv-az479-337",
+		"Microsoft Windows Server 2022 Datacenter",
+		"2022",
+		"Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz",
+		"Microsoft Hyper-V Video",
+		"71",
+		101,
+		"Virtual Machine",
 	}
 	got := Spec()
 	fmt.Println(got)
