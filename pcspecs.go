@@ -26,7 +26,7 @@ type SysInfo struct {
 	MAINBOARD string `json:"mainboard"`
 }
 
-// SysInfo saves the system information
+// SysInfo gets the system information
 func Spec() SysInfo {
 	hostStat, _ := host.Info()
 	cpuStat, _ := cpu.Info()
@@ -52,14 +52,14 @@ func Spec() SysInfo {
 	videoControllerHistory, _ := videoController.Output()
 	pcGPU := strings.Replace(string(videoControllerHistory), "Name", "", -1)
 	pcGPUString := strings.Replace(pcGPU, "LuminonCore IDDCX Adapter", "", -1)
-	info.GPU = pcGPUString
+	info.GPU = strings.TrimSpace(pcGPUString)
 
 	// Gets MAINBOARD info
 	mainBoard := exec.Command("cmd", "/C", "wmic path win32_BaseBoard get Product")
 	mainBoard.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 	mainBoardHistorys, _ := mainBoard.Output()
 	mainBoardString := strings.Replace(string(mainBoardHistorys), "Product", "", -1)
-	info.MAINBOARD = mainBoardString
+	info.MAINBOARD = strings.TrimSpace(mainBoardString)
 
 	h := windows.MustLoadDLL("kernel32.dll")
 	c := h.MustFindProc("GetDiskFreeSpaceExW")
