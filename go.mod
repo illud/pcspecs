@@ -1,4 +1,4 @@
-module github.com/saturnavt/pcspecs
+module github.com/illud/pcspecs
 
 go 1.17
 

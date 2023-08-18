@@ -23,19 +23,19 @@ PcSpecs requires [Go](https://golang.org/) v1.11+ to run.
 Install the dependencies.
 
 ```sh
-go get github.com/saturnavt/pcspecs
+go get github.com/illud/pcspecs
 ```
 Or
 
 ```sh
-go install github.com/saturnavt/pcspecs@latest
+go install github.com/illud/pcspecs@latest
 ```
 ## How to use
 
 Import:
 
 ```go
-pcs "github.com/saturnavt/pcspecs"
+pcs "github.com/illud/pcspecs"
 ```
 
 Example:
@@ -43,7 +43,7 @@ Example:
 ```go
 package main
 
-import pcs "github.com/saturnavt/pcspecs"
+import pcs "github.com/illud/pcspecs"
 
 func main(){
     fmt.Println(pcs.Spec())
@@ -64,7 +64,7 @@ Or
 ```go
 package main
 
-import pcs "github.com/saturnavt/pcspecs"
+import pcs "github.com/illud/pcspecs"
 
 func main(){
     fmt.Println(pcs.Spec().GPU)
